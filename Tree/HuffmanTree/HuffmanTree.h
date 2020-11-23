@@ -65,7 +65,7 @@ public:
 		forest(0), root(nullptr){}
 	HuffmanTree(vector<BinNode<string>>& f, BinNode<T>* r = nullptr) :
 		root(r) {
-		forest = f;  buildHuffmanTree(); preorderCode(root);
+		forest.buildHeap(f);  buildHuffmanTree(); preorderCode(root);
 	}
 
 	bool buildHuffmanTree();//建立编码树
